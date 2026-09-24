@@ -1,0 +1,23 @@
+Column,Business meaning,Type,Role
+customer_id,Unique customer identifier,Text,Identifier (not used as a feature)
+gender,Customer gender (Female/Male),Categorical,Feature
+senior_citizen,"1 if the customer is a senior citizen, else 0",Binary,Feature
+partner,Whether the customer has a partner,Categorical,Feature
+dependents,Whether the customer has dependents,Categorical,Feature
+tenure,Number of months the customer has been with the company,Numeric,Feature
+phone_service,Whether the customer has phone service,Categorical,Feature
+multiple_lines,Whether the customer has multiple phone lines,Categorical,Feature
+internet_service,Type of internet service (DSL / Fiber optic / No),Categorical,Feature
+online_security,Online security add-on,Categorical,Feature
+online_backup,Online backup add-on,Categorical,Feature
+device_protection,Device protection add-on,Categorical,Feature
+tech_support,Technical support add-on,Categorical,Feature
+streaming_tv,Streaming TV add-on,Categorical,Feature
+streaming_movies,Streaming movies add-on,Categorical,Feature
+contract,Contract type (Month-to-month / One year / Two year),Categorical,Feature
+paperless_billing,Whether the customer uses paperless billing,Categorical,Feature
+payment_method,How the customer pays (4 methods),Categorical,Feature
+monthly_charges,Amount charged per month,Numeric,Feature; revenue measure
+total_charges,Total amount charged over the customer's lifetime,Numeric,Feature; revenue measure
+churn,Whether the customer left (Yes/No),Categorical,Original target label
+churn_flag,"Churn encoded for ML: Yes = 1, No = 0",Binary,Target variable

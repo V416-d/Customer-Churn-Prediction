@@ -1,0 +1,379 @@
+{
+  "n_customers": 7043,
+  "n_churned": 1869,
+  "churn_rate": 0.2654,
+  "tenure_by_churn": {
+    "No": {
+      "mean": 37.57,
+      "median": 38.0
+    },
+    "Yes": {
+      "mean": 17.98,
+      "median": 10.0
+    }
+  },
+  "charges_by_churn": {
+    "No": {
+      "mean": 61.27,
+      "median": 64.43
+    },
+    "Yes": {
+      "mean": 74.44,
+      "median": 79.65
+    }
+  },
+  "association_top": [
+    {
+      "feature": "contract",
+      "cramers_v": 0.41
+    },
+    {
+      "feature": "tenure_group",
+      "cramers_v": 0.349
+    },
+    {
+      "feature": "online_security",
+      "cramers_v": 0.347
+    },
+    {
+      "feature": "tech_support",
+      "cramers_v": 0.343
+    },
+    {
+      "feature": "internet_service",
+      "cramers_v": 0.322
+    },
+    {
+      "feature": "payment_method",
+      "cramers_v": 0.303
+    }
+  ],
+  "eda_churn_rates": {
+    "contract": {
+      "Month-to-month": 0.4271,
+      "One year": 0.1127,
+      "Two year": 0.0283
+    },
+    "tenure_group": {
+      "0-12": 0.4744,
+      "13-24": 0.2871,
+      "25-48": 0.2039,
+      "49-72": 0.0951
+    },
+    "charge_band": {
+      "<=35": 0.1089,
+      "35-70": 0.2394,
+      "70-90": 0.378,
+      ">90": 0.3278
+    },
+    "payment_method": {
+      "Bank transfer (automatic)": 0.1671,
+      "Credit card (automatic)": 0.1524,
+      "Electronic check": 0.4529,
+      "Mailed check": 0.1911
+    },
+    "internet_service": {
+      "DSL": 0.1896,
+      "Fiber optic": 0.4189,
+      "No": 0.074
+    },
+    "tech_support": {
+      "No": 0.4164,
+      "Yes": 0.1517,
+      "No internet service": 0.074
+    },
+    "online_security": {
+      "No": 0.4177,
+      "Yes": 0.1461,
+      "No internet service": 0.074
+    },
+    "senior_citizen": {
+      "0": 0.2361,
+      "1": 0.4168
+    },
+    "gender": {
+      "Female": 0.2692,
+      "Male": 0.2616
+    }
+  },
+  "revenue": {
+    "total_monthly_revenue": 456116.6,
+    "monthly_revenue_of_churned": 139130.85,
+    "pct_of_monthly_revenue_churned": 30.5
+  },
+  "sql": {
+    "revenue_by_churn_status": [
+      {
+        "churn": "No",
+        "customers": 5174,
+        "monthly_revenue": 316985.75,
+        "pct_of_monthly_revenue": 69.5
+      },
+      {
+        "churn": "Yes",
+        "customers": 1869,
+        "monthly_revenue": 139130.85,
+        "pct_of_monthly_revenue": 30.5
+      }
+    ],
+    "churn_by_spend_quartile": [
+      {
+        "spend_quartile": 1,
+        "customers": 1761,
+        "churned": 198,
+        "churn_rate_pct": 11.24,
+        "min_charge": 18.25,
+        "max_charge": 35.5
+      },
+      {
+        "spend_quartile": 2,
+        "customers": 1761,
+        "churned": 434,
+        "churn_rate_pct": 24.65,
+        "min_charge": 35.5,
+        "max_charge": 70.35
+      },
+      {
+        "spend_quartile": 3,
+        "customers": 1761,
+        "churned": 659,
+        "churn_rate_pct": 37.42,
+        "min_charge": 70.35,
+        "max_charge": 89.85
+      },
+      {
+        "spend_quartile": 4,
+        "customers": 1760,
+        "churned": 578,
+        "churn_rate_pct": 32.84,
+        "min_charge": 89.85,
+        "max_charge": 118.75
+      }
+    ],
+    "top_segments_by_churned_revenue": [
+      {
+        "contract": "Month-to-month",
+        "internet_service": "Fiber optic",
+        "customers": 2128,
+        "churned": 1162,
+        "churn_rate_pct": 54.61,
+        "monthly_revenue_of_churned": 100482.0
+      },
+      {
+        "contract": "Month-to-month",
+        "internet_service": "DSL",
+        "customers": 1223,
+        "churned": 394,
+        "churn_rate_pct": 32.22,
+        "monthly_revenue_of_churned": 18367.25
+      },
+      {
+        "contract": "One year",
+        "internet_service": "Fiber optic",
+        "customers": 539,
+        "churned": 104,
+        "churn_rate_pct": 19.29,
+        "monthly_revenue_of_churned": 10571.95
+      },
+      {
+        "contract": "One year",
+        "internet_service": "DSL",
+        "customers": 570,
+        "churned": 53,
+        "churn_rate_pct": 9.3,
+        "monthly_revenue_of_churned": 3356.25
+      }
+    ],
+    "churn_rate_by_contract": [
+      {
+        "contract": "Month-to-month",
+        "customers": 3875,
+        "churned": 1655,
+        "churn_rate_pct": 42.71
+      },
+      {
+        "contract": "One year",
+        "customers": 1473,
+        "churned": 166,
+        "churn_rate_pct": 11.27
+      },
+      {
+        "contract": "Two year",
+        "customers": 1695,
+        "churned": 48,
+        "churn_rate_pct": 2.83
+      }
+    ]
+  },
+  "n_train": 5634,
+  "n_test": 1409,
+  "cv_baseline": [
+    {
+      "Model": "Logistic Regression",
+      "accuracy": 0.7501,
+      "precision": 0.519,
+      "recall": 0.7967,
+      "f1": 0.6284,
+      "roc_auc": 0.8458
+    },
+    {
+      "Model": "Decision Tree",
+      "accuracy": 0.7359,
+      "precision": 0.5027,
+      "recall": 0.491,
+      "f1": 0.4967,
+      "roc_auc": 0.6579
+    },
+    {
+      "Model": "Random Forest",
+      "accuracy": 0.7916,
+      "precision": 0.6495,
+      "recall": 0.4689,
+      "f1": 0.5444,
+      "roc_auc": 0.8272
+    }
+  ],
+  "tuned": {
+    "Logistic Regression": {
+      "cv_roc_auc": 0.846,
+      "params": {
+        "C": 0.1
+      }
+    },
+    "Decision Tree": {
+      "cv_roc_auc": 0.8321,
+      "params": {
+        "max_depth": 5,
+        "min_samples_leaf": 60
+      }
+    },
+    "Random Forest": {
+      "cv_roc_auc": 0.8483,
+      "params": {
+        "max_depth": 10,
+        "min_samples_leaf": 20
+      }
+    }
+  },
+  "best_model": "Random Forest",
+  "test_by_model": [
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 0.7339,
+      "Precision": 0.4992,
+      "Recall": 0.7914,
+      "F1": 0.6122,
+      "ROC-AUC": 0.8417
+    },
+    {
+      "Model": "Decision Tree",
+      "Accuracy": 0.7544,
+      "Precision": 0.5259,
+      "Recall": 0.7594,
+      "F1": 0.6214,
+      "ROC-AUC": 0.8341
+    },
+    {
+      "Model": "Random Forest",
+      "Accuracy": 0.7587,
+      "Precision": 0.5308,
+      "Recall": 0.7834,
+      "F1": 0.6328,
+      "ROC-AUC": 0.8452
+    }
+  ],
+  "confusion_matrix": {
+    "tn": 776,
+    "fp": 259,
+    "fn": 81,
+    "tp": 293
+  },
+  "test_metrics": {
+    "Accuracy": 0.7587,
+    "Precision": 0.5308,
+    "Recall": 0.7834,
+    "F1": 0.6328,
+    "ROC-AUC": 0.8452
+  },
+  "threshold_table": [
+    {
+      "threshold": 0.3,
+      "customers_flagged_pct": 55.8,
+      "precision": 0.43,
+      "recall": 0.904,
+      "f1": 0.583
+    },
+    {
+      "threshold": 0.4,
+      "customers_flagged_pct": 47.8,
+      "precision": 0.476,
+      "recall": 0.858,
+      "f1": 0.613
+    },
+    {
+      "threshold": 0.5,
+      "customers_flagged_pct": 39.2,
+      "precision": 0.531,
+      "recall": 0.783,
+      "f1": 0.633
+    },
+    {
+      "threshold": 0.6,
+      "customers_flagged_pct": 30.1,
+      "precision": 0.592,
+      "recall": 0.671,
+      "f1": 0.629
+    },
+    {
+      "threshold": 0.7,
+      "customers_flagged_pct": 20.9,
+      "precision": 0.656,
+      "recall": 0.516,
+      "f1": 0.578
+    }
+  ],
+  "top_features": {
+    "contract": 0.048,
+    "tenure": 0.0159,
+    "internet_service": 0.0115,
+    "tenure_group": 0.0098,
+    "total_charges": 0.009,
+    "online_security": 0.0036,
+    "payment_method": 0.003,
+    "tech_support": 0.0027
+  },
+  "risk_bands": [
+    {
+      "risk_category": "Low",
+      "customers": 3682,
+      "actual_churn_rate": 0.069,
+      "churned": 255,
+      "avg_monthly_charges": 56.113,
+      "pct_of_customers": 52.279,
+      "pct_of_all_churners": 13.644
+    },
+    {
+      "risk_category": "Medium",
+      "customers": 1867,
+      "actual_churn_rate": 0.334,
+      "churned": 624,
+      "avg_monthly_charges": 71.406,
+      "pct_of_customers": 26.509,
+      "pct_of_all_churners": 33.387
+    },
+    {
+      "risk_category": "High",
+      "customers": 1494,
+      "actual_churn_rate": 0.663,
+      "churned": 990,
+      "avg_monthly_charges": 77.772,
+      "pct_of_customers": 21.213,
+      "pct_of_all_churners": 52.97
+    }
+  ],
+  "oof_metrics": {
+    "roc_auc": 0.8472,
+    "recall": 0.7758,
+    "precision": 0.5366
+  }
+}
